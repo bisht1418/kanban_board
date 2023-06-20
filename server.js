@@ -3,6 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 const { connectDB } = require("./db");
 const { userRoutes } = require("./routes/auth.routes");
+const { boardRoutes } = require("./routes/board.routes");
 
 const port = process.env.PORT || 8080;
 const app = express();
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
   res.json({ message: "welcome to kanban api" });
 });
 app.use("/api", userRoutes);
+app.use("/api", boardRoutes);
 
 app.listen(port, async () => {
   try {
