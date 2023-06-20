@@ -8,7 +8,7 @@ const subTaskSchema = new Schema({
 const taskSchema = new Schema({
   title: String,
   description: String,
-  status: { type: String, enum: ["Todo", "Doing", "Done"], default: "Todo" },
+  status: { type: String, default: "Todo" },
   subtasks: [subTaskSchema],
 });
 
