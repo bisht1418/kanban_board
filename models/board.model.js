@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const subTaskSchema = new Schema({
-  title: String,
+  subTitle: String,
   isCompleted: Boolean,
 });
 
